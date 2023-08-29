@@ -5,11 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Menu() {
+function Menu(props) {
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
             <Container fluid>
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="#" onClick={() => props.setLoading(true)}>Bootstrap Website</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -17,19 +17,19 @@ function Menu() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link</Nav.Link>
+                        <Nav.Link href="#action1" onClick={() => props.setLoading(true)}>Home</Nav.Link>
+                        <Nav.Link href="#action2" onClick={() => props.setLoading(true)}>Link</Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
+                            <NavDropdown.Item href="#action3" onClick={() => props.setLoading(true)}>Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4" onClick={() => props.setLoading(true)}>
                                 Another action
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
+                            <NavDropdown.Item href="#action5" onClick={() => props.setLoading(true)}>
                                 Something else here
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#" disabled>
+                        <Nav.Link href="#" disabled onClick={() => props.setLoading(true)}>
                             Link
                         </Nav.Link>
                     </Nav>
