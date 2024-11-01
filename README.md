@@ -21,7 +21,7 @@ npm i
 ```
 
 ## Initialization
-To execute the app, just execute the command:
+To run the app, run the command:
 ```
 npm start
 ```
