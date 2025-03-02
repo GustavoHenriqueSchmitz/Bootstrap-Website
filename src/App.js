@@ -4,6 +4,7 @@ import Menu from './components/Menu/Menu';
 import Slider from './components/Slider/Slider';
 import { useEffect, useState } from 'react';
 import Loading from './components/Spinner/Spinner';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
@@ -18,19 +19,22 @@ function App() {
   }, [loading]);
 
   return (
-    <div className="align-page">
-      <div className="align-menu">
-        <Menu setLoading={setLoading}/>
-      </div>
-      <div className="align-slider">
-        <Slider/>
-      </div>
-      { loading &&
-        <div className='loading-container'>
-          <Loading/>
+    <>
+      <div className="align-page">
+        <div className="align-menu">
+          <Menu setLoading={setLoading}/>
         </div>
-      }
-    </div>
+        <div className="align-slider">
+          <Slider/>
+        </div>
+        { loading &&
+          <div className='loading-container'>
+            <Loading/>
+          </div>
+        }
+      </div>
+      <Analytics/>
+    </>
   );
 }
 
