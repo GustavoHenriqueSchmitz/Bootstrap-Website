@@ -12,7 +12,7 @@
 **1 -** Clone the project:
 
 ```
-git clone https://github.com/GustavoHenriqueSchmitz/LoginSystem.git
+https://github.com/GustavoHenriqueSchmitz/Bootstrap-Website.git
 ```
 
 **2 -** Install the dependencies:
